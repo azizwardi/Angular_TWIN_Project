@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-component.component.css']
 })
 export class HeaderComponentComponent {
+  isAdmin : boolean = false;
+  classAdmin : string ="navbar navbar-expand-lg navbar-light bg-light"
+  classNotAdmin : string = "navbar navbar-expand-lg navbar-dark bg-dark"
 
 }

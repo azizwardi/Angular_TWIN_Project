@@ -7,6 +7,9 @@ import { HeaderComponentComponent } from './header-component/header-component.co
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { ListCategoriesComponentComponent } from './list-categories-component/list-categories-component.component';
+import { FormsModule } from '@angular/forms';
+import { ContainsPipe } from './contains.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -16,10 +19,13 @@ import { ListCategoriesComponentComponent } from './list-categories-component/li
     FooterComponentComponent,
     HomeComponentComponent,
     ListCategoriesComponentComponent,
+    ContainsPipe, //pipe
+    HighlightDirective, //directive
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule //so i can use ngModel
   ],
   providers: [],
   bootstrap: [AppComponent]
