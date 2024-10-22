@@ -11,6 +11,10 @@ const routes: Routes = [
     {path:"category/:id", component:DetailsCategoryComponent}
 ]},
   {path:"", redirectTo:"home", pathMatch:'full'},
+  {path:'products', loadChildren: () => import('./product-module/product-module.module').then(m=>m.ProductModuleModule)},
+  {path:'contact', loadChildren: ()=>import('./contact-module/contact-module.module').then(m=>m.ContactModuleModule)},
+  {path:'profile', loadChildren: ()=>import('./profile-module/profile-module.module').then(m=>m.ProfileModuleModule)},
+  {path:'apropos', loadChildren: ()=>import('./apropos-module/apropos-module.module').then(m=>m.AproposModuleModule)},
   {path:"products/:id", component:ProductsCategoryComponent},
   {path:"products", component:ProductsCategoryQPComponentComponent},
   {path:"**", component:NotFoundPageComponentComponent },
