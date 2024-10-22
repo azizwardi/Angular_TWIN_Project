@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Category } from '../models/category';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-categories-component',
@@ -14,6 +15,12 @@ export class ListCategoriesComponentComponent {
   getDescription(desc:string){
     alert(desc);
   }
+  constructor(private router: Router) {}
+
+  viewProducts(categoryId: number) {
+    this.router.navigate(['/products', categoryId]);
+  }
+
 
   categories : Category[]=[
     {"id":1,"title":"Grand électroménager",

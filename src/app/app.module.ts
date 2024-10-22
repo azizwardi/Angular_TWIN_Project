@@ -10,6 +10,10 @@ import { ListCategoriesComponentComponent } from './list-categories-component/li
 import { FormsModule } from '@angular/forms';
 import { ContainsPipe } from './contains.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NotFoundPageComponentComponent } from './not-found-page-component/not-found-page-component.component';
+import { ProductsCategoryComponent } from './products-category/products-category.component';
+import { ProductsCategoryQPComponentComponent } from './products-category-qpcomponent/products-category-qpcomponent.component';
+import { DetailsCategoryComponent } from './details-category/details-category.component';
 
 
 @NgModule({
@@ -20,7 +24,7 @@ import { HighlightDirective } from './highlight.directive';
     HomeComponentComponent,
     ListCategoriesComponentComponent,
     ContainsPipe, //pipe
-    HighlightDirective, //directive
+    HighlightDirective, NotFoundPageComponentComponent, ProductsCategoryComponent, ProductsCategoryQPComponentComponent, DetailsCategoryComponent, //directive
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,11 @@
     <div *ngFor="let category of categories | contains:title" class="col-md-4" style="margin-bottom: 20px;">
       <img (click)="getDescription(category.description)" [src]="category.image" [alt]="category.title" class="img-fluid h-50 w-75">
       <h3 appHighlight>{{ category.title | uppercase }}</h3>
-      <button [hidden]="!category.available" class="btn btn-primary">Voir produits</button>
+      <a [routerLink]="['category',category.id]">Voir détails</a>
+      <button [hidden]="!category.available" (click)="viewProducts(category.id)" class="btn btn-primary">Voir produits</button>
+      <a [routerLink]="['/products']" [queryParams]="{id: category.id}"><button class="btn btn-primary" *ngIf="category.available">Voir produits2</button></a>
       <span *ngIf="!category.available">Catégorie non disponible!</span>
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>
